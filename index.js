@@ -13,6 +13,12 @@ if (!validUsernames.includes(username) || password !== validPassword) {
 let role = username;
 let securityLevel = (username === "admin") ? "high" : "low";
 
+if (username === "admin") {
+  alert("You have successfully logged in. Your security level is high.");
+} else if (username === "user") {
+  alert("Welcome!");
+}
+
 // Part 2: Coffee Shop Order Calculator
 const customerName = prompt("What's your name?");
 const age = parseInt(prompt("How old are you?"));
